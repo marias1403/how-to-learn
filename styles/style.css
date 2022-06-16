@@ -263,7 +263,7 @@
 .section-title_theme_dark {
   color: #fff;
   margin-top: 90px;
-  z-index: 2
+  z-index: 2;
 }
 
 .section-subtitle_theme_dark {
@@ -272,7 +272,7 @@
 
 .table_theme_dark {
   margin-bottom: 90px;
-  z-index: 2
+  z-index: 2;
 }
 
 .table__cell_theme_dark {
