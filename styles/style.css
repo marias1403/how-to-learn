@@ -15,10 +15,7 @@
 
 .page__digits {
   margin-top: 100px;
-}
-
-.page__feynman {
-  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .header {
@@ -282,7 +279,8 @@
 }
 
 .kaufman__triangle {
-  background-image: url(/images/kaufman-triangle.svg);
+  background-image: url(../images/kaufman-triangle.svg);
+  background-size: auto;
   width: 877px;
   height: 877px;
   position: absolute;
