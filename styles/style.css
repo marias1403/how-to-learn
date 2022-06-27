@@ -1,23 +1,58 @@
+@keyframes rotation {
+  from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* сделала */
 .page {
   min-width: 1100px;
-  /* мы ещё не умеем делать мобильную версию сайта, */
-  /* поэтому выше установлена минимальная ширина страницы */
   max-width: 1600px;
-  /* выше установили ограничение по максимальной ширине */
   margin: 0 auto;
-  /* выше для экранов больше 1600px отцентрировали весь контент */
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
+/* сделала */
 .page__description {
   margin-top: 100px;
 }
 
+/* сделала */
+.page__techniques {
+  margin: 100px auto 0;
+}
+
+/* сделала */
+.page__video {
+  margin-top: 100px;
+}
+
+/* сделала */
+.page__oakley {
+  padding-top: 160px;
+}
+
+/* сделала */
 .page__digits {
   margin-top: 100px;
   margin-bottom: 100px;
 }
 
+/* сделала */
+.page__khan {
+  padding-top: 105px;
+}
+
+/* сделала */
+.page__resources {
+  margin-top: 100px;
+  margin-bottom: 217px;
+}
+
+/* сделала */
 .header {
   height: 100vh;
   min-height: 600px;
@@ -27,19 +62,24 @@
   align-items: center;
   background-color: #f2f2f2;
   position: relative;
+  /* Это надо или нет? */
+  overflow: hidden;
 }
 
+/* сделала */
 .logo {
   width: 228px;
   height: 32px;
 }
 
+/* сделала */
 .logo_place_header {
   position: absolute;
   top: 30px;
   left: 64px;
 }
 
+/* сделала */
 .header__title {
   max-width: 730px;
   margin: 0 0 0 64px;
@@ -49,6 +89,7 @@
   z-index: 3;
 }
 
+/* сделала */
 .header__subtitle {
   margin: 0;
   max-width: 388px;
@@ -61,16 +102,20 @@
   z-index: 3;
 }
 
+/* сделала */
 .header__link {
   color: #2f80ed;
   text-decoration: none;
   z-index: 3;
 }
 
+/* сделала */
 .header__link:hover {
-  color: #000;
+  opacity: .1;
+  transition: opacity .3s ease-out;
 }
 
+/* сделала */
 .header__main-illustration {
   object-fit: cover;
   width: 765px;
@@ -81,7 +126,7 @@
   z-index: 2;
 }
 
-/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
+/* сделала */
 .header__square-pic {
   height: 568px;
   width: 568px;
@@ -90,19 +135,23 @@
   right: 0;
   background-color: #2f80ed;
   z-index: 1;
+  animation: rotation 20s linear infinite;
 }
 
+/* сделала */
 .description {
   display: flex;
   justify-content: center;
 }
 
+/* сделала */
 .two-columns {
   display: flex;
   width: 80%;
   justify-content: space-between;
 }
 
+/* сделала */
 .two-columns__brief {
   max-width: 175px;
   line-height: 1.2;
@@ -113,11 +162,13 @@
   padding: 0;
 }
 
+/* сделала */
 .two-columns__main-text {
   width: 80%;
   min-width: 784px;
 }
 
+/* сделала */
 .two-columns__paragraph {
   line-height: 34px;
   font-size: 24px;
@@ -127,75 +178,109 @@
   margin-bottom: 30px;
 }
 
+/* сделала */
 .two-columns__paragraph:last-of-type {
   margin-bottom: 0;
 }
 
+/* сделала */
 .two-columns__span-accent {
   font-weight: 700;
 }
 
-.digits {
+/* сделала */
+.techniques {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
+
+/* сделала */
+.cards {
+  margin: 0;
+  padding: 0;
+  width: 920px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+
+/* сделала */
+.cards__item {
+  width: 240px;
+  margin-right: 100px;
+  margin-top: 60px;
+}
+
+/* сделала */
+.cards__item:nth-of-type(3n) {
+  margin-right: 0;
+}
+
+/* сделала */
+.cards__image {
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+  margin: auto 40px;
+}
+
+/* сделала */
+.cards__title {
+  margin: 43px auto 0;
+  padding: 0;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* сделала */
+.cards__description {
+  margin: 16px auto 0;
+  padding: 0;
+  line-height: 23px;
+  font-size: 18px;
+  font-weight: normal;
+  text-align: center;
+}
+
+/* сделала */
+.video {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.section-title {
-  margin: 0 0 20px 0;
-  padding: 0;
-  width: 60%;
-  text-align: center;
-  line-height: 1.15;
-  font-size: 60px;
-  font-weight: 700;
-}
-
-.section-subtitle {
-  margin: 0;
-  padding: 0;
-  width: 60%;
-  text-align: center;
-  line-height: 34px;
-  font-size: 24px;
-  font-weight: normal;
-}
-
-.table {
-  margin: 0;
-  padding: 0;
+/* сделала */
+.video__iframes {
   display: flex;
-  width: 1100px;
-  list-style: none;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  position: relative;
+    top: 50px;
 }
 
-.table__cell {
-  width: 250px;
-  margin-top: 60px;
+
+/* сделала */
+.video__iframe {
+  margin-right: 20px;
 }
 
-.table__heading {
-  margin: 0 0 20px 0;
-  padding: 0;
-  line-height: 1.15;
-  font-size: 24px;
-  font-weight: 700;
+
+/* сделала */
+.video__iframe:nth-of-type(2n) {
+  margin-right: 0;
 }
 
-.table__text {
-  margin: 0 0 20px;
-  padding: 0;
-  line-height: 1.2;
-  font-size: 18px;
-  font-weight: normal;
+/* сделала */
+.oakley {
+  display: flex;
+  justify-content: center;
+  background-color: #f2f2f2;
 }
 
-.table__text:last-of-type {
-  margin-bottom: 0;
-}
-
+/* сделала */
 .feynman {
   position: relative;
   min-height: 890px;
@@ -205,6 +290,7 @@
   background-color: #f2f2f2;
 }
 
+/* сделала */
 .feynman__pic {
   position: absolute;
   left: 0;
@@ -214,6 +300,7 @@
   z-index: 1;
 }
 
+/* сделала */
 .feynman__title {
   margin: 100px 0 70px 0;
   max-width: 648px;
@@ -224,6 +311,7 @@
   z-index: 2;
 }
 
+/* сделала */
 .feynman__subtitle {
   margin: 0;
   line-height: 51px;
@@ -232,6 +320,7 @@
   z-index: 2;
 }
 
+/* сделала */
 .feynman__link {
   position: absolute;
   top: 50%;
@@ -244,10 +333,176 @@
   z-index: 2;
 }
 
+/* сделала */
 .feynman__link:hover {
-  color: #000;
+  opacity: .1;
+  transition: opacity .3s ease-out;
 }
 
+/* сделала */
+.digits {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* сделала */
+.section-title {
+  margin: 0 0 20px 0;
+  padding: 0;
+  width: 60%;
+  text-align: center;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: 700;
+}
+
+/* сделала */
+.section-subtitle {
+  margin: 0;
+  padding: 0;
+  width: 60%;
+  text-align: center;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+/* сделала */
+.table {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 1100px;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* сделала */
+.table__cell {
+  width: 250px;
+  margin-top: 60px;
+}
+
+/* сделала */
+.table__heading {
+  margin: 0 0 20px 0;
+  padding: 0;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* сделала */
+.table__text {
+  margin: 0 0 20px;
+  padding: 0;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+/* сделала */
+.table__text:last-of-type {
+  margin-bottom: 0;
+}
+
+/* сделала */
+.khan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f2f2f2;
+}
+
+/* сделала */
+.khan__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 80%;
+}
+
+/* сделала */
+.khan__author {
+  margin: 0;
+  padding: 0;
+  line-height: 42px;
+  font-size: 30px;
+  font-weight: normal;
+}
+
+/* сделала */
+.khan__title {
+  margin: 0;
+  padding: 0;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: 700;
+}
+
+/* сделала */
+.khan__quote {
+  margin: 50px 0 0 0;
+  padding: 0;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+/* сделала */
+.khan__quote-author {
+  margin: 36px 0 0 0;
+  padding: 0;
+  width: 790px;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* сделала */
+.khan__quote-author-subline {
+  margin: 10px 0 0 0;
+  padding: 0;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+/* сделала */
+.khan__book-container {
+  display: flex;
+  margin: 68px 0 0 0;
+}
+
+/* сделала */
+.khan__book-pic {
+  width: 620px;
+  height: 608px;
+  margin-right: 48px;
+  background-image: url(/images/khan-book.jpg);
+  background-size: cover;
+}
+
+/* сделала */
+.khan__buy-link {
+  margin: 0;
+  padding: 0;
+  line-height: 42px;
+  font-size: 30px;
+  font-weight: normal;
+  color: #2f80ed;
+  text-decoration: none;
+}
+
+/* сделала */
+.khan__buy-link:hover {
+  opacity: .1;
+  transition: opacity .3s ease-out;
+}
+
+/* сделала */
 .kaufman {
   position: relative;
   overflow: hidden;
@@ -257,27 +512,32 @@
   background-color: #1f1f1f;
 }
 
+/* сделала */
 .section-title_theme_dark {
   color: #fff;
   margin-top: 90px;
   z-index: 2;
 }
 
+/* сделала */
 .section-subtitle_theme_dark {
   color: #fff;
 }
 
+/* сделала */
 .table_theme_dark {
   margin-bottom: 90px;
   z-index: 2;
 }
 
+/* сделала */
 .table__cell_theme_dark {
   margin-top: 80px;
   width: 200px;
   color: #fff;
 }
 
+/* сделала */
 .kaufman__triangle {
   background-image: url(../images/kaufman-triangle.svg);
   background-size: cover;
@@ -287,8 +547,36 @@
   top: 0;
   right: -210px;
   z-index: 1;
+  animation: rotation 20s linear infinite;
 }
 
+/* сделала */
+.resources {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* сделала */
+.resources__logo-zone {
+  display: flex;
+  margin-top: 80px;
+  width: 1100px;
+}
+
+/* сделала */
+.resources__link {
+  width: 270px;
+  height: 38px;
+}
+
+/* сделала */
+.resources__link:hover {
+  opacity: .1;
+  transition: opacity .3s ease-out;
+}
+
+/* сделала */
 .footer {
   display: flex;
   justify-content: center;
@@ -296,6 +584,7 @@
   background-color: #1f1f1f;
 }
 
+/* сделала */
 .footer__columns {
   display: flex;
   justify-content: space-between;
@@ -304,6 +593,7 @@
   margin: 60px 0 40px 0;
 }
 
+/* сделала */
 .footer__column_content_copyright {
   display: flex;
   flex-direction: column;
@@ -312,6 +602,7 @@
   height: 100%;
 }
 
+/* сделала */
 .footer__author {
   line-height: 25px;
   font-size: 18px;
@@ -320,11 +611,13 @@
   color: #fff;
 }
 
+/* сделала */
 .footer__column_content_social {
   display: flex;
   flex-direction: column;
 }
 
+/* сделала */
 .footer__column-heading {
   margin: 0 0 20px;
   line-height: 30px;
@@ -333,6 +626,7 @@
   color: #fff;
 }
 
+/* сделала */
 .footer__column-links {
   list-style: none;
   padding: 0px;
@@ -342,6 +636,7 @@
   margin-bottom: 16px;
 }
 
+/* сделала */
 .footer__column-link {
   line-height: 30px;
   font-size: 18px;
@@ -350,10 +645,13 @@
   color: #fff;
 }
 
+/* сделала */
 .footer__column-link:hover {
-  color: #2f80ed;
+  opacity: .1;
+  transition: opacity .3s ease-out;
 }
 
+/* сделала */
 .footer__social-icon {
   width: 16px;
   height: 16px;
